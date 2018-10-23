@@ -73,6 +73,7 @@ const pushFile = (stream, path, fileName) => {
 
 // handle requests
 const http2Handlers = (req, res) => {
+  console.log(req.url);
   if (req.url === "/") {
     // push style.css
     pushFile(res.stream, "/style.css", "style.css");
